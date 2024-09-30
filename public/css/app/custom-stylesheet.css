@@ -1,0 +1,317 @@
+/* Custom styles for Filament sidebar */
+
+/* Sidebar Container */
+.fi-sidebar {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    position: absolute;
+    width: 320px;
+    left: 0;
+    top: 0;
+    bottom: -0.15px;
+
+    /* White background */
+    background: #FFFFFF !important;
+
+    /* Grey/200 border */
+    border-right: 1px solid #E5E7EB;
+
+    /* Shadow */
+    box-shadow: 20px 4px 54px rgba(0, 0, 0, 0.06);
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+/*.fi-sidebar-header{
+    border-right: 1px solid #E5E7EB !important;
+!* Shadow *!
+    box-shadow: 20px 4px 54px rgba(0, 0, 0, 0.06) !important;
+}*/
+
+
+/* Additional styles if needed for items */
+.fi-sidebar .fi-sidebar-nav {
+    width: 100%; /* Full width */
+    padding-right:6px;
+}
+
+.fi-sidebar .fi-sidebar-item a {
+    background-color: #FFFFFF !important; /* Optional hover effect */
+}
+
+.fi-sidebar .fi-sidebar-item-active a,
+.fi-sidebar .fi-sidebar-item a:hover {
+    background-color: #F59E0B !important; /* Optional hover effect */
+}
+
+.fi-sidebar-item .fi-sidebar-item-icon{
+    color: #111827 !important;
+
+}
+.fi-sidebar-item a:hover .fi-sidebar-item-label,
+.fi-sidebar-item a:hover .fi-sidebar-item-icon,
+.fi-sidebar-item-active .fi-sidebar-item-label,
+.fi-sidebar-item-active .fi-sidebar-item-icon {
+    color: #FFFFFF !important; /* Change icon color to white on hover */
+}
+
+.overflow-x-clip{
+    width: 100%;
+    border-right: 1px solid #E5E7EB !important;
+    box-shadow: 20px 4px 54px rgba(0, 0, 0, 0.06);
+}
+/* Custom Logo */
+.custom-logo{
+    display: flex;
+}
+.custom-logo .logo-class {
+    width: 114px;
+    margin-left: 18px;
+}
+
+.fi-sidebar-header {
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to left, #efeded 10%, #FF9F01 80%, #efeded 10%) 1;
+}
+body .fi-sidebar-header {
+    box-shadow: 20px 4px 54px rgba(0, 0, 0, 0.06) !important;
+}
+
+
+/* Styling for the separator line */
+.separator-nav-group ul{
+    padding: 24px 0;
+}
+
+/* Add separator line */
+.separator-nav-group::before,
+.separator-nav-group::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #E5E7EB;
+    width: calc(100% - -30px);
+    margin-left: 16px;
+}
+
+.separator-nav-group::before {
+    top: 0; /* Line above */
+}
+.separator-nav-group::after {
+    bottom: 0; /* Line below */
+}
+
+
+
+
+/* Custom CSS to position the breadcrumbs */
+.fi-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.fi-breadcrumbs {
+    margin-left: 20px; /* Adjust left margin to provide space from the left */
+    margin-bottom: 10px; /* Adjust bottom margin for spacing */
+}
+.page-header{
+    width: 100%;
+}
+.page-header h1{
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .fi-header .fi-breadcrumbs {
+        position: fixed;
+        top: 24px;
+        z-index: 100;
+        margin-left: 0;
+    }
+}
+
+th span{
+    color: #4B5563 !important;
+}
+
+.fi-global-search-field input,
+.fi-global-search-field div {
+    background-color: #f3f3f3 !important;
+}
+
+.fi-global-search-field input:focus,
+.fi-global-search-field div {
+    background-color: #f3f3f3 !important;
+    border-radius: 0.375rem !important;
+
+}
+
+
+/* Login */
+.fi-simple-main, .fi-simple-main main {
+    position: relative;
+}
+.fi-simple-main section::before {
+    content: "";
+    position: absolute;
+    width: 603px;
+    height: 603px;
+    left: calc(50% - 603px / 2 - 47.5px);
+    top: -145px;
+    background: #FBD89D;
+    opacity: 0.35;
+    filter: blur(197px);
+    pointer-events: none;
+
+}
+.fi-simple-main .icon-class{
+    display: none;
+}
+
+.fi-simple-main .logo-class{
+    width: 146px;
+    height: 29.5px;
+}
+
+
+/*page*/
+.rug-pattern {
+    position: relative;
+    background-image: url('/images/pages/background-pattern.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / -2);
+    margin-right: calc((100% - 100vw) / -2);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.fi-sidebar {
+    z-index: 22 !important;
+}
+
+/* Table Styles */
+.table-rectangle {
+    width: 600px;
+    height: 300px;
+    background-color: #dddddd;
+    border-radius: 0.75rem;
+    position: relative;
+}
+
+.table-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* Plate Styles */
+.plate {
+    width: 80px;
+    height: 80px;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.plate-gap {
+    margin-right: 170px;
+}
+
+/* Chair Styles */
+.chair-position {
+    position: absolute;
+    width: 135px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.seat-number {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.border-2 {
+    border: 2px solid #374151;
+}
+
+/* Chair Images Rotation */
+.chair-img-3 {
+    transform: rotate(90deg);
+}
+
+.chair-img-4,
+.chair-img-5 {
+    transform: rotate(180deg);
+}
+
+.chair-img-6 {
+    transform: rotate(270deg);
+}
+
+/* Specific Chair Position Styles */
+.chair-position-1 {
+    inset: 0;
+    margin-top: -53px;
+    margin-left: 103px;
+}
+
+.chair-position-2 {
+    inset: 0;
+    margin-top: -54px;
+    margin-left: 360px;
+}
+
+.chair-position-3 {
+    inset: 0;
+    margin-left: 560px;
+    margin-top: 119px;
+}
+
+.chair-position-4 {
+    margin-left: 361px;
+    margin-top: -3px;
+}
+
+.chair-position-5 {
+    margin-left: 106px;
+    margin-top: -3px;
+}
+
+.chair-position-6 {
+    margin-top: -173px;
+    margin-left: -97px;
+}
+
+.button-section {
+    margin-right: 13rem !important;
+}
+.button-section .primary {
+    background-color: #1A56DB !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    margin-left: 10px;
+}
+
